@@ -16,7 +16,7 @@ import requests
 headers = {
     'accept': 'application/json',
 }
-
+#artem
 
 if __name__ == '__main__':
     response = requests.get('https://alexbobr.ru/table/', headers=headers)
