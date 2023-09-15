@@ -12,6 +12,7 @@ import requests
 #     }
 #     response = requests.post(f'https://api.qiwi.com/partner/payin-tokenization-api/v1/sites/{siteId}/token-requests',
 #                              json=data, headers=headers).json()
+#test
 
 headers = {
     'accept': 'application/json',
