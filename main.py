@@ -1,25 +1,24 @@
 import requests
+import json
 
-# headers = {
-#         'Accept': 'application/json',
-#         'Content-Type': 'application/json',
-#         'Authorization': f'Bearer {merchant_token}',
-#     }
-#     data = {
-#         "requestId": requestid,
-#         "phone": phone,
-#         "accountId": accountid
-#     }
-#     response = requests.post(f'https://api.qiwi.com/partner/payin-tokenization-api/v1/sites/{siteId}/token-requests',
-#                              json=data, headers=headers).json()
-#test
+token = '64f837cb7a7dc64f837cb7a7de'
 
 headers = {
     'accept': 'application/json',
+    'Content-Type': 'application/json',
+}
+data = {
+    "token": token,
 }
 
+def news():
+    response = requests.get('https://datsorange.devteam.games/news/LatestNews5Minutes', headers=headers)
+    response = response.json()
+    print(response[0]['date'])
+    print(response[0]['text'])
+    print(response[0]['rate'])
+    print(response[0]['companiesAffected'])
+    return
 
 if __name__ == '__main__':
-    response = requests.get('https://alexbobr.ru/table/', headers=headers)
-    response = response.json()
-    print(response[0]['point_begin'])
+    news()
