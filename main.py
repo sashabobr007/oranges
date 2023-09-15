@@ -1,8 +1,6 @@
 import requests
 import json
 
-token = '64f837cb7a7dc64f837cb7a7de'
-
 headers = {
     'accept': 'application/json',
     'Content-Type': 'application/json',
